@@ -5,3 +5,6 @@ env:
   matrix: 
   - OCAML_VERSION=4.01.0 OPAM_VERSION=1.1.0
 language: c
+branches:
+  only:
+  - master
