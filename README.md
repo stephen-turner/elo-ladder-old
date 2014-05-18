@@ -9,7 +9,7 @@ This project is forked from Rob Hoes's chess ladder, https://github.com/robhoes/
 Note that the output includes some concepts that are not applicable to
 backgammon, such as the number of games as white and black, and drawn games.
 This is intentional in order to keep the code as little diverged from upstream
-as possible.
+as possible; meaningless statistics are filtered out client-side.
 
 ## Getting involved
 The results of the ladder are automatically published at
