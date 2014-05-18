@@ -303,10 +303,7 @@ let rec setify = function
 	| (x :: xs) -> if List.mem x xs then setify xs else x :: (setify xs)
 
 let get_stakes players (nick1, nick2) =
-	let player1 = List.assoc nick1 players in
-	let player2 = List.assoc nick2 players in
-	let update result = 0. (* k *. (result -. get_expectation player1.rating player2.rating) *) in
-	update 1., update 0.5, update 0.
+        0., 0., 0.
 
 let suggested_matches nicks stats =
 	let count_limit = match stats with [] -> 0 | (_, (c, _, _, _, _)) :: _ -> c + 1 in
