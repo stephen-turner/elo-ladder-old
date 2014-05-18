@@ -37,7 +37,6 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   echo -e "Starting to update gh-pages\n"
 
   #copy data we're interested in to other place
-  cp index.md $HOME/index.md
   cp ladder.json $HOME/ladder.json
   cp ladder.png $HOME/ladder.png
 
