@@ -141,7 +141,7 @@ let gnuplot_strings_of_history players =
 	let open Printf in
 	let preamble = [
 		"set term pngcairo size 1920,1080 linewidth 1.75 enhanced font \"Droid Sans,18\"";
-		"set title 'XenServer Chess Ladder' font \"Droid Sans,34\"";
+		"set title 'XenServer Backgammon Ladder' font \"Droid Sans,34\"";
 		"set xtics format''";
 		"set key rmargin bottom reverse Left";
 		"set datafile separator '\\t'";
