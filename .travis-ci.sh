@@ -30,7 +30,6 @@ eval `opam config -env`
 
 # Post-boilerplate
 make
-./ladder print --gh-pages --title "XenServer Chess Ladder" players games --reverse > index.md
 ./ladder json players games > ladder.json
 (echo set terminal png; ./ladder history --format=gnuplot players games) | gnuplot > ladder.png
 
@@ -48,28 +47,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git config --global user.name "Travis"
 
   #using token clone gh-pages branch
-  git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/simonjbeaumont/elo-ladder.git  gh-pages > /dev/null
-
-  #go into directory and copy data we're interested in to that directory
-  cd gh-pages
-  cp -f $HOME/index.md .
-  cp -f $HOME/ladder.png .
-  cp -f $HOME/ladder.json .
-
-  #add, commit and push files
-  git add index.md
-  git add ladder.png
-  git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
-  git push -fq origin gh-pages > /dev/null
-  
-  echo -e "Updated Si's gh-pages with latest ladder\n"
-  
-  #similar for Rob's github pages
-  cd $HOME
-  rm -rf gh-pages
-
-  #using token clone gh-pages branch
-  git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/robhoes/elo-ladder.git  gh-pages > /dev/null
+  git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/stephen-turner/elo-ladder.git  gh-pages > /dev/null
 
   #go into directory and copy data we're interested in to that directory
   cd gh-pages
@@ -82,5 +60,5 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
   git push -fq origin gh-pages > /dev/null
 
-  echo -e "Updated Rob's gh-pages with latest ladder\n"
+  echo -e "Updated gh-pages with latest backgammon ladder\n"
 fi
