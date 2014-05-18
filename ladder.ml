@@ -533,19 +533,19 @@ let help_secs = [
 		`P "Where $(i,ID) can be any unique string, $(i,Elo-rating) is the
 		    starting rating for the player as an integer, and active indicates
 		    whether the player is retired or not.";
-		`I ("Example:", "magnus,Magnus Carlsen,2870,true");
+		`I ("Example:", "X-22,Paul Magriel,1870,true");
 		`P ""; `Noblank;
 		`P "The $(i,GAMES) file should be in CSV format:";
-		`I ("Syntax:", "<Date>,<White's $(i,ID)>,<Black's $(i,ID)>,<$(i,RES)>");
-		`P "Where the date is in ISO 6801 format (yyyy-mm-dd); $(i,ID)s
-		    match those listed in the $(i,PLAYERS) file; and $(i,RES) is
-		    either $(i,1), $(i,.5) or $(i,0) in the case of a win, draw
-		    or loss for white respectively.";
-		`I ("Example:", "2013-11-21,magnus,anand,.5");
+		`I ("Syntax:", "<Date>,<Player 1's $(i,ID)>,<Player 2's $(i,ID)>,<$(i,LENGTH)>,<$(i,RES)>");
+		`P "Where the date is in ISO 8601 format (yyyy-mm-dd); $(i,ID)s
+		    match those listed in the $(i,PLAYERS) file; $(i,LENGTH) is the match length
+		    (winning score); and $(i,RES) is either $(i,1) or $(i,0) in the case of a win or loss
+		    for Player 1 respectively.";
+		`I ("Example:", "2013-11-21,X-22,robertie,7,1");
 	`S "BUGS";
 		`I ("Please report bugs by opening an issue on the Elo-ladder
 		     project page on Github:",
-		    "https://github.com/robhoes/elo-ladder"); ]
+		    "https://github.com/stephen-turner/elo-ladder"); ]
 
 let players_path =
 	let doc = "Path to players file. See $(i,FILE-FORMATS) for details." in

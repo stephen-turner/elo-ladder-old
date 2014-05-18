@@ -1,12 +1,19 @@
-# Elo-ladder [![Build Status](https://travis-ci.org/robhoes/elo-ladder.png)](https://travis-ci.org/robhoes/elo-ladder)
+# Elo-ladder [![Build Status](https://travis-ci.org/stephen-turner/elo-ladder.png)](https://travis-ci.org/stephen-turner/elo-ladder)
 
-_An Elo-rating based ladder competition manager_
+_An Elo-rating based backgammon ladder competition manager_
 
-The algorithm is as described on http://en.wikipedia.org/wiki/ELO_rating_system.
+The algorithm is the Elo-Kaufman algorithm, as popularised by FIBS.
+It is described at http://www.bkgm.com/faq/Ratings.html.
+
+This project is forked from Rob Hoes's chess ladder, https://github.com/robhoes/elo-ladder.
+Note that the output includes some concepts that are not applicable to
+backgammon, such as the number of games as white and black, and drawn games.
+This is intentional in order to keep the code as little diverged from upstream
+as possible.
 
 ## Getting involved
 The results of the ladder are automatically published at
-http://robhoes.github.io/elo-ladder.
+http://stephen-turner.github.io/elo-ladder.
 
 Here you can also find instructions on adding yourself to the ladder and
 recording games that you have played.
@@ -46,24 +53,24 @@ FILE-FORMATS
        whether the player is retired or not.
 
        Example:
-           magnus,Magnus Carlsen,2870,true
+           X-22,Paul Magriel,1870,true
 
        
        The GAMES file should be in CSV format:
 
        Syntax:
-           <Date>,<White's ID>,<Black's ID>,<RES>
+           <Date>,<Player 1's ID>,<Player 2's ID>,<LENGTH>,<RES>
 
-       Where the date is in ISO 6801 format (yyyy-mm-dd); IDs match those
-       listed in the PLAYERS file; and RES is either 1, .5 or 0 in the case
-       of a win, draw or loss for white respectively.
+       Where the date is in ISO 8601 format (yyyy-mm-dd); IDs match those
+       listed in the PLAYERS file; LENGTH is the match length (winning score);
+       and RES is either 1 or 0 in the case of a win or loss for Player 1 respectively.
 
        Example:
-           2013-11-21,magnus,anand,.5
+           2013-11-21,X-22,robertie,7,1
 
 BUGS
        Please report bugs by opening an issue on the Elo-ladder project page
        on Github:
-           https://github.com/robhoes/elo-ladder
+           https://github.com/stephen-turner/elo-ladder
 
 ```
