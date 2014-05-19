@@ -5,7 +5,7 @@ _An Elo-rating based backgammon ladder competition manager_
 The algorithm is the Elo-Kaufman algorithm, as popularised by FIBS.
 It is described at http://www.bkgm.com/faq/Ratings.html.
 
-This project is forked from Rob Hoes's chess ladder, https://github.com/robhoes/elo-ladder.
+This project is forked from Rob Hoes and Simon Beaumont's chess ladder, https://github.com/robhoes/elo-ladder.
 Note that the output includes some concepts that are not applicable to
 backgammon, such as the number of games as white and black, and drawn games.
 This is intentional in order to keep the code as little diverged from upstream
