@@ -1,5 +1,8 @@
-felipe,Felipe Franciosi,1500,true
-si,Si Beaumont,1500,true
-stephentu,Stephen Turner,1500,true
-bill,Bill Briscombe,1500,true
-enzo,Enzo Raso,1500,true
+# This is an example!
+# Look at https://github.com/stephen-turner/elo-ladder-backgammon for the
+#   XenServer backgammon ladder.
+# This is an example!
+# Look at robhoes/elo-ladder-chess for the XenServer chess ladder.
+X-22,Paul Magriel,1870,true
+robertie,Bill Robertie,1870,true
+
